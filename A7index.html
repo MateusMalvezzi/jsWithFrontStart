@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <ul>
+        <li class="item">Arroz</li>
+        <li class="item">whey</li>
+        <li class="item">Macarrao</li>
+    </ul>
+
+    <script>
+        //HTMLCollection
+        //const itens = Array.from(document.getElementsByClassName('item'));
+        //console.log (itens);
+
+
+        // Transformando um HTMLCollection em um array
+        // Turning an HTMLCollection into an array
+
+        const itens = Array.from(document.getElementsByClassName('item'));
+        console.log (itens);
+
+        itens.forEach(item => {
+            item.addEventListener('click', onItemClick);
+        })
+
+        function onItemClick(event){
+            console.log('Clicou no item', event.target);
+            const value = event.target;
+        }
+
+
+
+        //Outra possibilidade para pegar os itens 
+
+        //function onItemClick(event){
+            //console.log('Clicou no item', event.target.innerHTML);
+        //}
+
+        //function onItemClick(event){
+            //console.log('Clicou no item', event.target.attributes.itemtype.value);
+        //}
+
+        //O addEventListener ns ajudara com todos os detalhes do evento.
+    </script>
+
+
+
+</body>
+
+</html>
+
+
+
+
+        
